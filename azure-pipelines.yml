@@ -25,7 +25,7 @@ stages:
       inputs:
         version: '$(dotnetSdkVersion)'
 
-    - task: Npm@1 
+    - task: Npm@1
       displayName: 'Run npm install'
       inputs: 
         verbose: false
@@ -78,7 +78,7 @@ stages:
     strategy:
       runOnce:
         deploy:
-          steps:
+          steps: 
           - download: current
             artifact: drop
           - task: AzureWebApp@1
